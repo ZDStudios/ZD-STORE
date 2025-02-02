@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+    tor-browser:
+        image: 'kasmweb/tor-browser:1.16.0'
+        environment:
+            - VNC_PW=password
+        ports:
+            - '6901:6901'
+        shm_size: 512m
+        tty: true
+        stdin_open: true
